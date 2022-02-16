@@ -1,0 +1,53 @@
+POST http://localhost:5000/api/v1/auth/register
+Content-Type: application/json
+
+{
+    "name": "dat1",
+    "email": "dat1@gmail.com",
+    "password": "dat123"
+}
+
+### 
+POST http://localhost:5000/api/v1/auth/login
+Content-Type: application/json
+
+{
+    "email": "dat@gmail.com",
+    "password": "dat123"
+}
+
+###
+GET http://localhost:5000/api/v1/auth/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjBhMTc0NGRhZTM3ZjNhYTEyNzZiMzkiLCJpYXQiOjE2NDQ4MzEwNDR9.v1MYTfaNtiCadyGWCjoYLuxx8bqsgPRdB7NkIChhmuE
+
+
+###
+
+GET http://localhost:5000/api/v1/post/
+
+
+###
+
+POST http://localhost:5000/api/v1/post/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjBhMTc0NGRhZTM3ZjNhYTEyNzZiMzkiLCJpYXQiOjE2NDQ4MzEwNDR9.v1MYTfaNtiCadyGWCjoYLuxx8bqsgPRdB7NkIChhmuE
+
+{
+    "content": "anhdatlamotnguoituyetvoianhayxungdangcomotnguoicongaituyetvoinhuem111333444"
+}
+
+###
+PUT http://localhost:5000/api/v1/post/620a23ff9eed9a378d9c8fe3
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjBiNDI5ZjAzMTI2YmYwOWRmYTcyMDkiLCJpYXQiOjE2NDQ5MjY4Njd9.0nY3nEwERASYK1IO7VixSTKn42mssi2FVmldH7KN8Kw
+
+{
+    "content": "anhdatlamotnguoituyetvoianhayxungdangcomotnguoicongaituyetvoi+hanhphuctrondoi11"
+}
+
+###
+
+DELETE http://localhost:5000/api/v1/post/620c84ddb14871a5cfbba0bf
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjBhMTc0NGRhZTM3ZjNhYTEyNzZiMzkiLCJpYXQiOjE2NDQ4MzEwNDR9.v1MYTfaNtiCadyGWCjoYLuxx8bqsgPRdB7NkIChhmuE
