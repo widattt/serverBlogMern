@@ -1,6 +1,6 @@
 require('dotenv').config()
 const express = require('express')
-const cors = require('cors')
+// const cors = require('cors')
 const authRoute = require('./routes/authRoute')
 const postRoute = require('./routes/postRoute.js')
 const { connectDB } = require('./config/db')
@@ -8,7 +8,12 @@ const { connectDB } = require('./config/db')
 connectDB()
 const app = express()
 
-app.use(cors())
+app.use(function(req, res, next) {
+    res.header ('Access-Control-Allow-Origin', '*')
+    res.header ('Access-Control-Allow-Credentials', true)
+    res.header ('Access-Control-Allow-Methods', 'POST, GET, PUT, DELETE, OPTIONS')
+    res.header ('Access-Control-Allow-Headers', 'Content-Type')
+})
 app.use(express.json())
 app.use(express.urlencoded({ extended: true, limit: '30mb' }));
 
